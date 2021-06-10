@@ -1,5 +1,5 @@
 # data_science_kit 
-  ### Those I've read... ###
+Those I've read... 
 
 
 ## Machine Learning ##
