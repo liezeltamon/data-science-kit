@@ -3,7 +3,8 @@ Those I've read...
 
 X - not read but referred to by content I've read
 
-
+## General ##
+  * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube Channel)
 
 
 ## Machine Learning ##
