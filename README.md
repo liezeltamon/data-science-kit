@@ -8,6 +8,7 @@ Those I've read...
 ## Learning R ##
   * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
   * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
+  * [Advanced R Solutions - 2nd ed](https://advanced-r-solutions.rbind.io/) (Online version of book) 
 
 ## Machine Learning ##
 
