@@ -10,11 +10,22 @@ Those I've read...
   * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
   * [Advanced R Solutions - 2nd ed](https://advanced-r-solutions.rbind.io/) (Online version of book) 
 
+
 ## Machine Learning ##
 
-
+  ### Resource ###
+  * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
+  
   ### Ensembling ###
-   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
-   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
+  * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
+  * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
    
 
+## Concepts ##
+
+  ### Naive Bayes ###
+  * [6 Easy Steps to Learn Naive Bayes Algorithm with codes in Python and R](https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/?fbclid=IwAR1SOR7dNcJ1XrnPLCYT5ZOgAdcoABme4tiRA7Dg5U-LT6KekjA8IRBkvVU) (Article)
+
+  ### Bayesian Optimisation ###
+  * [How to Implement Bayesian Optimization from Scratch in Python](https://machinelearningmastery.com/what-is-bayesian-optimization/) (Article, Coding demo)
+ 
