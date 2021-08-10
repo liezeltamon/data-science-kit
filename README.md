@@ -29,3 +29,7 @@ Those I've read...
   ### Bayesian Optimisation ###
   * [How to Implement Bayesian Optimization from Scratch in Python](https://machinelearningmastery.com/what-is-bayesian-optimization/) (Article, Coding demo)
  
+## Coding interview prepartion ##
+  * [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/) (Website) 
+  * [HackerRank](https://www.hackerrank.com/dashboard) (Website) 
+  * [AlgoExpert](https://www.algoexpert.io/questions) (Website) 
