@@ -1,0 +1,24 @@
+---
+title: "Single-cell_notes"
+format: html
+editor: visual
+---
+
+### Single-cell sequencing protocols
+
+1.  3 types of protocols mainly differentiated by cell isolation method
+    -   Cells in droplets (microfluidics)
+        -   Captures only 3' of transcript (R2 end, R1 + cell barcode + UMI at 5')
+        -   10x Genomics Chromium (outperformed two other similar methods but 2x more expensive per cell, Zhang et al. 2019)
+2.  Potential biases
+    1.  Protocols have biases for certain transcripts
+        -   "10X Genomics favored the capture and amplification of shorter genes and genes with higher GC content" - Scbp (Single-cell best practices)
+    2.  Some cell types more vulnerable to dissociation (e.g. non-neuronal cells survive better than neurons - Darmanis et al. 2015, Scbp)
+
+### Raw data processing
+
+1.  Get FASTQ files (Sequence + quality)
+2.  Check FASTQ sequence read quality - FastQC()
+    -   MultiQC() can be used to combine FastQC reports from each FASTQ
+
+## 
