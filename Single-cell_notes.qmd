@@ -7,18 +7,67 @@ editor: visual
 ### Single-cell sequencing protocols
 
 1.  3 types of protocols mainly differentiated by cell isolation method
-    -   Cells in droplets (microfluidics)
+    -   Commercial Fluidigm C1 microfluidic chip based
+    -   Well plate based
+    -   Microfluididics device based (cells in droplets)
         -   Captures only 3' of transcript (R2 end, R1 + cell barcode + UMI at 5')
         -   10x Genomics Chromium (outperformed two other similar methods but 2x more expensive per cell, Zhang et al. 2019)
 2.  Potential biases
-    1.  Protocols have biases for certain transcripts
+    -   Protocols have biases for certain transcripts
         -   "10X Genomics favored the capture and amplification of shorter genes and genes with higher GC content" - Scbp (Single-cell best practices)
-    2.  Some cell types more vulnerable to dissociation (e.g. non-neuronal cells survive better than neurons - Darmanis et al. 2015, Scbp)
+    -   Some cell states are more vulnerable to dissociation (e.g. non-neuronal cells survive better than neurons - Darmanis et al. 2015, Scbp)
 
 ### Raw data processing
 
 1.  Get FASTQ files (Sequence + quality)
-2.  Check FASTQ sequence read quality - FastQC()
-    -   MultiQC() can be used to combine FastQC reports from each FASTQ
+    -   Manual download from https://www.ebi.ac.uk/ena/browser/view/\<SR ID\>
 
-## 
+    -   Batch download using SRA Toolkit:
+
+        ```         
+        fastq-dump --split-files --gzip SRR6334436
+        ```
+2.  Check FASTQ sequence read quality
+    -   FastQC
+    -   MultiQC can be used to combine FastQC reports from each FASTQ
+
+### Trimming then can re-run QC
+
+1.  Check whether trimming is needed based on initial QC
+2.  Trim Galore
+
+### Read mapping/alignment and quantification
+
+Tools below can do both alignment and quantification but they can be used in combination e.g. 1 tool for alignment + 1 tool for quantification (will use BAM from alignment method).
+
+1.  Cell Ranger
+    -   Preparing SRA data for Cell Ranger
+        -   https://kb.10xgenomics.com/hc/en-us/articles/115003802691-How-do-I-prepare-Sequence-Read-Archive-SRA-data-from-NCBI-for-Cell-Ranger-
+
+        -   "Cell Ranger requires FASTQ file names to follow the `bcl2fastq` file naming convention."
+
+            `[Sample Name]`\_S1_L00`[Lane Number]`\_`[Read Type]`\_001.fastq.gz
+2.  Kallisto
+3.  STARsolo (available in latest STAR versions)
+
+### Transformations
+
+1.  Comparison and benchmarking study from Wolfgang Huber
+    -   Comparison to identify conceptual differences i.e. vulnerability of size factor confounding, dealing with mean-variance relationship, dealing with bimodal expression of genes
+    -   Benchmarking to identify performance differences
+        -   They measured performance based on how useful the methods are in understanding variety of cell types and states via k-NN graphs
+        -   They recommended benchmarking, measuring performance based on marker gene identification
+    -   Take-aways
+        -   Delta-based methods have better overall performance compared with residual-based and latent-based methods (more complicated methods)
+
+        -   Dimension reduction via PCA improves performance
+
+        -   For initial analysis of individual datasets, just try delta based methods particularly the log transformation on Seurat first
+
+            -   Avoid using CPM as it overestimates the overdispersion
+            -   Overdisperson of 0.05 performs well
+            -   Check confounding effect of size factors as delta-based methods are more vulnerable to do this compare with other types of approaches
+
+        -   Delta-based and residuals-based methods complement each other based on their conceptual differences so probably useful to see that results are robust between these two types
+
+        -   Simplest method with good performance (good starting point) is the **log(y/s +yo) with yo =1 followed by PCA**.
