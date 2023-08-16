@@ -27,6 +27,7 @@ editor: visual
         ```         
         fastq-dump --split-files --gzip SRR6334436
         ```
+
 2.  Check FASTQ sequence read quality
     -   FastQC
     -   MultiQC can be used to combine FastQC reports from each FASTQ
@@ -44,6 +45,10 @@ Tools below can do both alignment and quantification but they can be used in com
             `[Sample Name]`\_S1_L00`[Lane Number]`\_`[Read Type]`\_001.fastq.gz
 2.  Kallisto
 3.  STARsolo (available in latest STAR versions)
+
+### Analysis - General Remarks
+
+1. Check first individual datasets before integrating. Check consistency between technical and biological replicates.
 
 ### Transformations
 
