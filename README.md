@@ -4,13 +4,6 @@ Those I've read or still reading...
 ## General ##
   * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
 
-
-## Learning R ##
-  * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
-  * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
-  * [Advanced R Solutions - 2nd ed](https://advanced-r-solutions.rbind.io/) (Online version of book) 
-
-
 ## Machine Learning ##
 
   ### Resource ###
@@ -20,9 +13,17 @@ Those I've read or still reading...
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
    
+## R ##
+  * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
+  * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
+  * [Advanced R Solutions - 2nd ed](https://advanced-r-solutions.rbind.io/) (Online version of book) 
+
 ## Single-cell ##
   * [Single-cell best practices](https://www.sc-best-practices.org/preamble.html) (Online version of book) 
 
+## Snakemake ##
+  * [Bash -> Make -> Snakemake](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/snakemake/tutorial.html) 
+  
 ## Concepts ##
 
   ### Naive Bayes ###
