@@ -36,3 +36,11 @@ Those I've read or still reading...
   * [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/) (Website) 
   * [HackerRank](https://www.hackerrank.com/dashboard) (Website) 
   * [AlgoExpert](https://www.algoexpert.io/questions) (Website) 
+
+## Project organisation ##
+  * [A Quick Guide to Organizing Computational Biology Projects](https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1000424) (Article)
+  * [Good Enough Practices in Scientific Computing](https://carpentries-incubator.github.io/good-enough-practices/05-project_organization/) (Website) 
+  * [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/compendia.html#basic-compendium) (Website) 
+  * [A Quick Guide to Organizing Data Science Projects](https://medium.com/outlier-bio-blog/a-quick-guide-to-organizing-data-science-projects-updated-for-2016-4cbb1e6dac71) (Blog)
+  * [Research Data Management @Harvard](https://researchdatamanagement.harvard.edu/best-practices-organizing-documenting-research-data) (Website) 
+  
