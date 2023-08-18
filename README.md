@@ -43,4 +43,11 @@ Those I've read or still reading...
   * [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/compendia.html#basic-compendium) (Website) 
   * [A Quick Guide to Organizing Data Science Projects](https://medium.com/outlier-bio-blog/a-quick-guide-to-organizing-data-science-projects-updated-for-2016-4cbb1e6dac71) (Blog)
   * [Research Data Management @Harvard](https://researchdatamanagement.harvard.edu/best-practices-organizing-documenting-research-data) (Website) 
-  
+
+ ## Conferences
+
+  ### Statistics
+  * [UK, Royal Statistical Society](https://rss.org.uk/training-events/conference-2023/)
+  * [US, Joint Statistical Meetings](https://www.amstat.org/meetings/joint-statistical-meetings)
+  * [US, Symposium on Data Science and Statistics](https://ww2.amstat.org/meetings/sdss/2023/)
+ 
