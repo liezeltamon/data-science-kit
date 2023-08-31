@@ -1,5 +1,8 @@
 # data_science_kit 
-Those I've read or still reading...
+Those I've read, still reading, also some suggestions from people...
+
+## Computational Genomics
+ * [Computational Genomics with R](https://compgenomr.github.io/book/index.html) (Online version of book)
 
 ## General ##
   * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
