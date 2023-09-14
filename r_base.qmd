@@ -1,0 +1,25 @@
+---
+title: "r_base"
+format: html
+editor: visual
+---
+
+### Data frames
+
+-   If column names not specified, names will be created based on column elements (see \`data.frame()\`help for naming format)
+
+```{r}
+data.frame(1:2, c("a", "b"))
+```
+
+-   \`summary()\` on a data frame returns boxplot metrics (plus mean) per column
+
+-   Using '\$' to subset, autocompletes (a small window of column names appears and dynamically changes as you type) when using RStudio
+
+-   \<span style="color:red;"\>Check\</span\>
+
+    ```{r}
+    iris[[1:2]]
+    ```
+
+-   For \`subset()\`, missing values are taken as FALSE
