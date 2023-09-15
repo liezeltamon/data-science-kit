@@ -23,3 +23,9 @@ data.frame(1:2, c("a", "b"))
     ```
 
 -   For \`subset()\`, missing values are taken as FALSE
+
+## ###Factors
+
+-   Factors remember the index of the levels rather than the actual name of the levels, so if you change the order of existing levels, the content of the factors will change
+
+-   In practice, I do not use \`levels()\` to change the levels, only to see what the current levels are. Safer to just define a new factor using \`factor()\` with the new levels
