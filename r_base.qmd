@@ -24,8 +24,20 @@ data.frame(1:2, c("a", "b"))
 
 -   For \`subset()\`, missing values are taken as FALSE
 
-## ###Factors
+### Data frames
 
 -   Factors remember the index of the levels rather than the actual name of the levels, so if you change the order of existing levels, the content of the factors will change
 
 -   In practice, I do not use \`levels()\` to change the levels, only to see what the current levels are. Safer to just define a new factor using \`factor()\` with the new levels
+
+### Markdown
+
+-   \<span style="color:red;"\>YAML syntax\</span\>
+
+-   \[Chunk options\](https://rmarkdown.rstudio.com/lesson-3.html)
+
+    -   \`include=FALSE\` - code and its output are not displayed but it is still run so other code chunks can use the output
+
+### Functions
+
+-   \<span style="color:red;"\>Different forms of functions in R\</span\>
