@@ -36,5 +36,9 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# Ignore these directories inlcuding all files within
+# Ignore these files
+*.html
+
+# Ignore these directories including all files within
 z_ignore_git/
+*files/
