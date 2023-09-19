@@ -22,7 +22,7 @@ data.frame(1:2, c("a", "b"))
     iris[[1:2]]
     ```
 
--   For \`subset()\`, missing values are taken as FALSE
+-   For `subset()`, missing values are taken as FALSE
 
 ### Data frames
 
