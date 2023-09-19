@@ -43,3 +43,9 @@ data.frame(1:2, c("a", "b"))
 -   \<span style="color:red;"\>Different forms of functions in R\</span\>
 
 -   `sort()` vs. `order()`
+
+### Applying functions to vectors and lists
+
+-   Applying functions to vectors and lists
+
+    -   `lapply()` - "l" because it always returns a "list", not because the input should be a list
