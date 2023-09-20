@@ -1,51 +1,52 @@
 ---
 title: "r_base"
 format: html
-editor: visual
 ---
 
 ### Data frames
 
--   If column names not specified, names will be created based on column elements (see `data.frame()`help for naming format)
+- If column names not specified, names will be created based on column elements (see `data.frame()`help for naming format)
 
 ```{r}
 data.frame(1:2, c("a", "b"))
 ```
 
--   `summary()` on a data frame returns boxplot metrics (plus mean) per column
+- `summary()` on a data frame returns boxplot metrics (plus mean) per column
 
--   Using '\$' to subset, autocompletes (a small window of column names appears and dynamically changes as you type) when using RStudio
+- Using '\$' to subset, autocompletes (a small window of column names appears and dynamically changes as you type) when using RStudio
 
--   \<span style="color:red;"\>Check\</span\>
+- [Check]{style="color: red;"}
 
-    ```{r}
-    iris[[1:2]]
-    ```
+  ```{r}
+  iris[[1:2]]
+  ```
 
--   For `subset()`, missing values are taken as FALSE
+- For `subset()`, missing values are taken as FALSE
 
-### Data frames
+### Factors
 
--   Factors remember the index of the levels rather than the actual name of the levels, so if you change the order of existing levels, the content of the factors will change
+- Factors remember the index of the levels rather than the actual name of the levels, so if you change the order of existing levels, the content of the factors will change
 
--   In practice, I do not use `levels()` to change the levels, only to see what the current levels are. Safer to just define a new factor using `factor()` with the new levels
+- In practice, I do not use `levels()` to change the levels, only to see what the current levels are. Safer to just define a new factor using `factor()` with the new levels
 
 ### Markdown
 
--   \<span style="color:red;"\>YAML syntax\</span\>
+- [YAML syntax]{style="color: red;"}
 
--   \[Chunk options\](https://rmarkdown.rstudio.com/lesson-3.html)
+- [Chunk options](https://rmarkdown.rstudio.com/lesson-3.html)
 
-    -   \`include=FALSE\` - code and its output are not displayed but it is still run so other code chunks can use the output
+  - `include = FALSE` - code and its output are not displayed but it is still run so other code chunks can use the output
 
 ### Functions
 
--   \<span style="color:red;"\>Different forms of functions in R\</span\>
+- [Different forms of functions in R]{style="color: red;"}
 
--   `sort()` vs. `order()`
+- `sort()` vs. `order()`
+- `data.matrix()` vs. `as.matrix()`
+  - `data.matrix()` will convert variables to numeric mode, useful if you absolute want a numeric matrix
 
 ### Applying functions to vectors and lists
 
--   Applying functions to vectors and lists
+- Applying functions to vectors and lists
 
-    -   `lapply()` - "l" because it always returns a "list", not because the input should be a list
+  - `lapply()` - 'l' because it always returns a 'list', not because the input should be a list
