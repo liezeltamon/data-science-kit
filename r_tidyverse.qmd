@@ -1,0 +1,8 @@
+---
+title: "r_tidyverse"
+format: html
+---
+
+### ggplot2
+
+- `aes()` function is used to map aesthetic (or part / component) of a plot to the underlying data frame of the plot
