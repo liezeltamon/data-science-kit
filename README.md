@@ -52,6 +52,9 @@ Those I've read, still reading, also some suggestions from people...
   * [A Quick Guide to Organizing Data Science Projects](https://medium.com/outlier-bio-blog/a-quick-guide-to-organizing-data-science-projects-updated-for-2016-4cbb1e6dac71) (Blog)
   * [Research Data Management @Harvard](https://researchdatamanagement.harvard.edu/best-practices-organizing-documenting-research-data) (Website) 
 
+## Free courses
+* [MIT OpenCourseWare]([https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1000424](https://ocw.mit.edu)) (Maths, stats, quantitative topics)
+
 ## Conferences
 
   ### Statistics
