@@ -6,3 +6,10 @@ format: html
 ### ggplot2
 
 - `aes()` function is used to map aesthetic (or part / component) of a plot to the underlying data frame of the plot
+
+
+### tibble
+
+- `tibble`
+  + No row names because if you have something you want to use as row names just add it as another column
+  + Unlike data frame, a tibble column can contain another tibble
