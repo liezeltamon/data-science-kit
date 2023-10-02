@@ -9,10 +9,10 @@ Those I've read, still reading, also some suggestions from people...
 
 ## Machine Learning
 
-  ### Resource
+### Resource
   * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
   
-  ### Ensembling
+### Ensembling
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
    
@@ -23,21 +23,23 @@ Those I've read, still reading, also some suggestions from people...
 
 ## Single-cell
   * [Single-cell best practices](https://www.sc-best-practices.org/preamble.html) (Online version of book) 
+  * For sequencing library details, check [Product User Guides](https://www.10xgenomics.com/support/user-guides/single-cell-gene-expression?menu%5BproductNames%5D=Single%20Cell%20Gene%20Expression&menu%5BproductExtensions%5D=&menu%5BchemistryVersionsAndIndices%5D=&page=1) of kits
+  * [BioinfQuests YouTube Channel](https://www.youtube.com/watch?v=xA4TrXrNfvU) for good explanation of single-cell experiment and analysis with Cell Ranger
 
 ## Snakemake
   * [Bash -> Make -> Snakemake](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/snakemake/tutorial.html) 
 
 ## Statistical tests
 
-  ### Wilcoxon Rank-Sum Test
+### Wilcoxon Rank-Sum Test
   * [What happens under the hood](https://www.stat.auckland.ac.nz/~wild/ChanceEnc/Ch10.wilcoxon.pdf)
 
 ## Concepts
 
-  ### Naive Bayes
+### Naive Bayes
   * [6 Easy Steps to Learn Naive Bayes Algorithm with codes in Python and R](https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/?fbclid=IwAR1SOR7dNcJ1XrnPLCYT5ZOgAdcoABme4tiRA7Dg5U-LT6KekjA8IRBkvVU) (Article)
 
-  ### Bayesian Optimisation
+### Bayesian Optimisation
   * [How to Implement Bayesian Optimization from Scratch in Python](https://machinelearningmastery.com/what-is-bayesian-optimization/) (Article, Coding demo)
  
 ## Coding interview prepartion
@@ -57,7 +59,7 @@ Those I've read, still reading, also some suggestions from people...
 
 ## Conferences
 
-  ### Statistics
+### Statistics
   * [UK, Royal Statistical Society](https://rss.org.uk/training-events/conference-2023/)
   * [US, Joint Statistical Meetings](https://www.amstat.org/meetings/joint-statistical-meetings)
   * [US, Symposium on Data Science and Statistics](https://ww2.amstat.org/meetings/sdss/2023/)
