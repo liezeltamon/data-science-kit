@@ -1,0 +1,10 @@
+---
+title: "misc"
+format: html
+---
+
+### Computing concepts
+
+- double 
+  + Refer to floating point numbers
+  + Takes double the space to store than integer -- 1 for number before decimal point, 1 for number after decimal point
