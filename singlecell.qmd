@@ -8,7 +8,8 @@ format: html
 1. 3 types of protocols mainly differentiated by cell isolation method
    - Commercial Fluidigm C1 microfluidic chip based
    - Well plate based
-   - Microfluidics device based (cells in droplets)
+   - Microfluidics device based 
+     + Use device to capture single cell in an emulsion or droplet
      + Captures only 3' of transcript (R2 end, R1 + cell barcode + UMI at 5')
      + 10x Genomics Chromium (outperformed two other similar methods but 2x more expensive per cell, Zhang et al. 2019)
 2. Potential biases
@@ -21,9 +22,12 @@ format: html
 1. Get FASTQ files (Sequence + quality)
    - Manual download from https://www.ebi.ac.uk/ena/browser/view/\<SR ID\>
      + Batch download using SRA Toolkit:
-       ```         
+     
+       ```{bash}
+       #| eval: false
        fastq-dump --split-files --gzip SRR6334436
        ```
+       
 2. Check FASTQ sequence read quality
    - FastQC
    - MultiQC can be used to combine FastQC reports from each FASTQ
@@ -61,3 +65,52 @@ Tools below can do both alignment and quantification but they can be used in com
 
      + Delta-based and residuals-based methods complement each other based on their conceptual differences so probably useful to see that results are robust between these two types
        - Simplest method with good performance (good starting point) is the **log(y/s +yo) with yo =1 followed by PCA**.
+       
+### CITE-seq / Feature barcoding and cell hashing
+
+- CITE-seq 
+  + Uses DNA-barcoded antibodies to measure surface proteins simultaneously with RNA
+  + Before partitioning cells in GEMs, cells get tagged by DNA-barcoded antibodies targeting markers
+  + DNA barcode will then be treated just like the other molecules 
+  + So on top of getting RNA profile of single cells, with CITE-seq we can get information on expression of surface protein markers per cell
+  + Amount of DNA barcode coming from antibody will reflect also level of surface protein
+  + Library construction -  size selection is used to separate the amplified cDNA molecules for 3' Gene Expression and Cell Surface Protein Library Construction (product giude, Chromium Next GEM Single Cell 3' HT Reagent Kits v3.1 (Dual Index))
+    - Separate library construction because the DNA barcode attached to antibody already have the sequencing read 2 (library specifc, used for PCR amplication?), meanwhile for the RNA first strands, the sequencing read 2 still have to be ligated to complete the fragment for sequencing
+
+- Cell hashing
+  + The same principle as CITE-seq but because the DNA-barcoded antibodies are used to tag different samples, antibodies can just target some ubiquitously expressed surface protein (across samples) instead of specific marker proteins
+  
+  
+# Analysis in Seurat 
+
+## Demultiplexing
+
+### HTODemux()
+
+- Starts with clustering cells based on HTO vectors
+- `HTODemux(positive.quantile)` - Per HTO, identifies the cluster of cells with lowest average for the HTO, fits a negative binomial distribution to values of that cluster and then identifies the value at given positive.quantile (this value is outputed per HTO while HTODemux is running), if a cell has higher HTO value that this value at that quantile, cell is considered to be positive for that HTO
+
+## Normalisation
+
+- Motivation 
+  + Account for systematic differences across samples or cells e.g. differences in sequencing depth / library size
+  
+### Normalisation methods
+
+- LogNormalise
+  + Per cell, counts are divided by a cell-specific size factor proportional to the library size
+  + Then log transformation is done to convert expression data, often right skewed (closer to a log normal distribution), into a distribution that is closer to a normal distribution, also reducing impact of outlier values
+- Centered log-ratio (CLR)
+  + Per cell, values are transformed such that each proportion of features sum up to 1 (100%) 
+  + Per cell, take the natural logarithm of the ratio of feature values to their geometric mean 
+  + Transformed values are then centered per FEATURE i.e. unlike logNormalise and RC, this method does transformation across cells
+- Relative counts (RC)
+  + logNormalise but skipping log transformation
+  
+## Find variable features
+
+- Point of methods is to stabilize the variance across the mean expression of genes, making it easier to identify genes whose variability is not simply due to mean expression
+
+### Methods
+
+- Variance stabilising transformation (vst)
