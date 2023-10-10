@@ -89,23 +89,33 @@ Tools below can do both alignment and quantification but they can be used in com
 
 - Starts with clustering cells based on HTO vectors
 - `HTODemux(positive.quantile)` - Per HTO, identifies the cluster of cells with lowest average for the HTO, fits a negative binomial distribution to values of that cluster and then identifies the value at given positive.quantile (this value is outputed per HTO while HTODemux is running), if a cell has higher HTO value that this value at that quantile, cell is considered to be positive for that HTO
+- Revisit CLR nomalisation (used for protein data normalisation) applied to HTO data?
 
 ## Normalisation
 
 - Motivation 
   + Account for systematic differences across samples or cells e.g. differences in sequencing depth / library size
   
+- `Seurat::NormalizeData()` always works off of the counts slots and will overwrite the data slot (https://github.com/satijalab/seurat/issues/2362)
+
 ### Normalisation methods
 
 - LogNormalise
   + Per cell, counts are divided by a cell-specific size factor proportional to the library size
   + Then log transformation is done to convert expression data, often right skewed (closer to a log normal distribution), into a distribution that is closer to a normal distribution, also reducing impact of outlier values
+  
 - Centered log-ratio (CLR)
   + Per cell, values are transformed such that each proportion of features sum up to 1 (100%) 
   + Per cell, take the natural logarithm of the ratio of feature values to their geometric mean 
   + Transformed values are then centered per FEATURE i.e. unlike logNormalise and RC, this method does transformation across cells
+  
 - Relative counts (RC)
   + logNormalise but skipping log transformation
+  
+- SCTransform 
+  + Modelling depedence of variance with log UMI (y ~ log_umi) using negative binomial expression?
+  + Calculates size factors per gene groups based on mean expression
+  
   
 ## Find variable features
 
@@ -114,3 +124,33 @@ Tools below can do both alignment and quantification but they can be used in com
 ### Methods
 
 - Variance stabilising transformation (vst)
+
+## Scaling data
+
+- `Seurat::ScaleData()` works off of the normalized data (data slot) (https://github.com/satijalab/seurat/issues/2362)
+- Seurat scales only variable features
+- "Default is to scale only the variable features" (https://github.com/satijalab/seurat/issues/2365)
+
+## Dimensionality reduction
+
+### PCA
+- "The default for `Seurat::RunPCA()` is to use the variable features, but there is a requirement that the features are scaled. It will issue a warning when you request features not in scaled data, but will still proceed with the subset that are scaled." (https://github.com/satijalab/seurat/issues/2365)
+
+## Clustering
+
+- `Seurat::FindNeighbors()` vs. `Seurat::FindClusters()`
+  + `FindNeighbors()` is only concerned with finding the k nearest neighbours of each data point based on some similarity or distance metric and computes nearest neighbour graph and optionally, shared nearest neighbour graph (SNN)
+   - The SNN graph is a representation of these shared nearest neighbor relationships. Each data point is a node in the graph, and there's an edge (a connection) between two nodes if they share a significant number of nearest neighbors. The strength of the connection can be determined by how many neighbors they share in common.
+   - In contrast, in an NN graph, edge is binary i.e. two data points (not) connected are (not) neighbors.
+   - In summary, while both NN and SNN graphs involve connecting data points based on nearest neighbors, the key distinction is that NN graphs have binary connections to a fixed number of nearest neighbors, whereas SNN graphs capture shared neighbor relationships with varying connection strengths. SNN graphs are particularly useful for identifying clusters or communities within datasets because they emphasize data points that are part of the same local structures.
+  
+  + `FindClusters()` has to cluster cells based on graph of shared nearest neighbors
+    - Resolution parameter above (below) 1.0 to tell clustering algorithm e.g. Louvain to find more smaller or fewer, larger clusters
+    
+## Identifying cluster markers
+
+- Points is to find features that can uniquely define a cluster
+- Straightforward approach is to test per feature, differential expression between two clusters
+
+- `Seurat::FindAllMarkers()` - comparing a cluster against all remaining cells from all other clusters (https://github.com/satijalab/seurat/issues/1075)
+- `Seurat::FindConservedMarkers()` - find differentially expressed markers between clusters that are conserved across other grouping variable e.g. batch; see [vignette](https://satijalab.org/seurat/articles/integration_introduction.html)
