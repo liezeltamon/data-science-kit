@@ -81,7 +81,36 @@ Tools below can do both alignment and quantification but they can be used in com
   + The same principle as CITE-seq but because the DNA-barcoded antibodies are used to tag different samples, antibodies can just target some ubiquitously expressed surface protein (across samples) instead of specific marker proteins
   
   
-# Analysis in Seurat 
+# Analysis
+
+## Quality control
+
+## Empty droplets
+
+- Use latest technology-specific expected percentage of empty droplets to help decide threshold for removing empty droplets
+
+## Doublets
+
+- Use latest technology-specific expected percentage of doublets to help decide threshold for removing doublets
+
+- DoubletFinder
+  + `modelHomotypic()` - operates based on expectation that homotypic doublets will likely be between cells that dominate sample so function use information about clusters and their sizes
+
+### Ambient RNA
+
+- Approaches
+
+  + Measure ambient RNA signal and adjust each cell count for their ambient RNA content
+    - This could convert counts to floating points, which may not be amenable for other downstream steps
+  + Measure ambient RNA signal and remove cells dominated by that signal
+  + Measure ambient RNA signal, see if you can proceed without removing cells or adjusting for ambient RNA, continue with usual workflow up to clustering and then see the level of ambient RNA contamination per cluster
+
+- Earlier methods used possibly empty droplets with ambient RNA to estimate ambient solution profile but the decontX method (`celda:decontX()`) uses different way such that you can apply it even after removing those empty droplets
+
+### Mitochondrial content
+
+- RNAs in mitochondria can be both mitochondrial and nuclear genome encoded
+  + Those human gene symbols with "M^T-" are the ones encoded by the mitochondrial genome
 
 ## Demultiplexing
 
@@ -97,6 +126,8 @@ Tools below can do both alignment and quantification but they can be used in com
   + Account for systematic differences across samples or cells e.g. differences in sequencing depth / library size
   
 - `Seurat::NormalizeData()` always works off of the counts slots and will overwrite the data slot (https://github.com/satijalab/seurat/issues/2362)
+
+- **Understand** `scuttle::computePooledFactors()`
 
 ### Normalisation methods
 
@@ -154,3 +185,26 @@ Tools below can do both alignment and quantification but they can be used in com
 
 - `Seurat::FindAllMarkers()` - comparing a cluster against all remaining cells from all other clusters (https://github.com/satijalab/seurat/issues/1075)
 - `Seurat::FindConservedMarkers()` - find differentially expressed markers between clusters that are conserved across other grouping variable e.g. batch; see [vignette](https://satijalab.org/seurat/articles/integration_introduction.html)
+
+# Single-cell ATAC-seq
+
+## Analysis
+
+### General notes
+
+- scATAC-seq data is more sparse than scRNA-seq data because we are profiling DNA and in theory, per cell, we should only get, 0, 1 or 2 (for diploid genome that behave consistently although it in reality behavior between alleles could be stochastic) counts per open region fragment
+
+- If you want to detect rare cell types, probably do not do peak calling which lowers the actual resolution of sequencing (by binning signal) so you might lose low signal peaks present in rare cell types
+  
+  + In scATAC-seq, peak calling might not be applicable, instead we can do tiling i.e. binning signal per single cell? (bin resolution used in ArchR according to Ravza is 500 bp)
+  
+- In ATAC-seq using Tn5, "fragment" is the DNA fragment bound by the Tn5 cut
+
+- scATAC more high-dimensional than scRNA because the features for the former, which are the DNA regions / peaks, can vary in number and exceed number of genes depending on the resolution used
+
+### Quality control
+
+- Number of unique nuclear fragments
+- Signal-to-noise background ratio
+  + Determined using TSS content i.e. we expect TSS to be enriched in the data
+- Fragment size distribution
