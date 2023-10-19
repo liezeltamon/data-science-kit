@@ -11,6 +11,7 @@ Those I've read, still reading, also some suggestions from people...
 ## Machine Learning
 
 ### Resource
+  * [An Introduction to Statistical Learning](https://hastie.su.domains/ISLP/) (Book)
   * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
   
 ### Ensembling
