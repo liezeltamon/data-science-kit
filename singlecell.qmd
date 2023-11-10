@@ -120,6 +120,8 @@ Tools below can do both alignment and quantification but they can be used in com
 - `HTODemux(positive.quantile)` - Per HTO, identifies the cluster of cells with lowest average for the HTO, fits a negative binomial distribution to values of that cluster and then identifies the value at given positive.quantile (this value is outputed per HTO while HTODemux is running), if a cell has higher HTO value that this value at that quantile, cell is considered to be positive for that HTO
 - Revisit CLR nomalisation (used for protein data normalisation) applied to HTO data?
 
+- **Try using CellHashR for consensus approach combining different methods**
+
 ## Normalisation
 
 - Motivation 
