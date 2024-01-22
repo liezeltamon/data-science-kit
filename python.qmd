@@ -1,0 +1,17 @@
+---
+title: "python"
+format: html
+---
+
+# Key concepts and differences of Python vs. R
+
+## Basic
+
+- Booleans should be written as True and False always
+- Ranges do not include end of range
+- Indentation needed to define heirarchy in if-else and for loop blocks
+
+## Data structures
+
+- By default, if a dictionary is modified all variables pointing to it gets the modification i.e. modify in place behaviour (unlike R's default copy-on-modify behaviour)
+- Dictionaries could be like lists, if the keys used are indexes
