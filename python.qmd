@@ -5,13 +5,43 @@ format: html
 
 # Key concepts and differences of Python vs. R
 
-## Basic
-
-- Booleans should be written as True and False always
-- Ranges do not include end of range
-- Indentation needed to define heirarchy in if-else and for loop blocks
+## Conditionals
+- Indentation needed to define hierarchy in if-else and for loop blocks
 
 ## Data structures
-
 - By default, if a dictionary is modified all variables pointing to it gets the modification i.e. modify in place behaviour (unlike R's default copy-on-modify behaviour)
 - Dictionaries could be like lists, if the keys used are indexes
+
+## Operators
+- `pass` - it will do nothing, useful for cases where you don't have to do anything in a certain condition because Python does not allow empty condition (e.g. nothing to do after `if` or `else`)
+
+## Variable types
+- Booleans should be written as True and False always
+- Ranges do not include end of range
+
+## Class
+
+- `def __init__(self, <other arguments>)` method - always needed to initialise a new object
+   + `__init__` is an instance method that initializes a newly created object
+   + The method takes the object as its first argument (self), followed by any additional arguments that need to be passed to it
+     - Using `self` on the template is a way to refer to the future instance of the class
+
+- Use private methods, for methods called only inside the class definition
+  + Use two underscores to make attributes or methods private
+  + If using two underscores at both ends as in `__init__` - semi-private
+
+- Although Python makes it easy to do this, best practice is still not to access the attribute of class directly
+  + Attributes can also be made private using two underscores
+
+- Remember that when calling a method of a class, it might be also calling other private methods
+
+- Expose only high-level methods not all smaller methods used to build that high-level method so you can freely change syntax of those smaller methods without breaking users' code
+
+- To make a child class, you can define in the class definition that this class with inherit from a certain parent class
+
+## NumPy
+
+- Elements of numpy are consecutively stored in memory so it is easy to access unlike elements of list that can be stored in different places
+
+- Arrays consume less memory than lists
+
