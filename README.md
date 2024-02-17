@@ -18,6 +18,11 @@ Those I've read, still reading, also some suggestions from people...
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
    
+## Mathematics
+
+### Linear algebra
+   * [3Blue1Brown](https://www.youtube.com/c/3blue1brown) (YouTube channel)
+
 ## R
   * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
   * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
@@ -31,17 +36,20 @@ Those I've read, still reading, also some suggestions from people...
 ## Snakemake
   * [Bash -> Make -> Snakemake](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/snakemake/tutorial.html) 
 
-## Statistical tests
+## Statistics
+  * [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature portfolio)
+    
+### Statistical tests
 
-### Wilcoxon Rank-Sum Test
+#### Wilcoxon Rank-Sum Test
   * [What happens under the hood](https://www.stat.auckland.ac.nz/~wild/ChanceEnc/Ch10.wilcoxon.pdf)
 
-## Concepts
+### Concepts
 
-### Naive Bayes
+#### Naive Bayes
   * [6 Easy Steps to Learn Naive Bayes Algorithm with codes in Python and R](https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/?fbclid=IwAR1SOR7dNcJ1XrnPLCYT5ZOgAdcoABme4tiRA7Dg5U-LT6KekjA8IRBkvVU) (Article)
 
-### Bayesian Optimisation
+#### Bayesian Optimisation
   * [How to Implement Bayesian Optimization from Scratch in Python](https://machinelearningmastery.com/what-is-bayesian-optimization/) (Article, Coding demo)
  
 ## Coding interview prepartion
