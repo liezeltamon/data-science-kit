@@ -131,6 +131,11 @@ Tools below can do both alignment and quantification but they can be used in com
 
 - **Understand** `scuttle::computePooledFactors()`
 
+- Removing some highly expressed genes before normalisation
+  + High gene counts can skew normalisation so some people may remove them before normalisation
+  + Maybe can do normalisation with all genes then if highly expressed genes do not significantly vary, can safely remove them then redo normalisaiton without these genes
+  + MALAT1 tend to be within nucleus so if you see it to be high in cytoplasm, could be sign of bad cell health - [10x Genomics article on this](https://kb.10xgenomics.com/hc/en-us/articles/360004729092-Why-do-I-see-high-levels-of-Malat1-in-my-gene-expression-data)
+
 ### Normalisation methods
 
 - LogNormalise
@@ -210,3 +215,19 @@ Tools below can do both alignment and quantification but they can be used in com
 - Signal-to-noise background ratio
   + Determined using TSS content i.e. we expect TSS to be enriched in the data
 - Fragment size distribution
+
+### Compositional analysis
+
+- Simply comparing proportions can be misleading because the limit on the capacity of cells that can be assayed/captured can artificially alter the composition of cells in a condition (explained in Scbp)
+- Two types of methods: 1) requires cell annotation e.g. scCODA 2) uses KNN graph e.g. MiloR
+  + Choosing depends on how robust is the clustering; 2nd type of method useful if working with data where hard boundaries between cell populations may not be advisable or practical such as developmental data or looking at states within a cell types 
+
+# Python single cell analysis
+
+# CellRanger vs. CellBender
+
+- Output counts highly correlated but CellBender counts are lower because:
+  + It removes barcodes likely to be ambient
+  + It removes counts from genes likely from ambient - probably based on modelling of ambient from barcodes likely to be empty and contain only ambient RNA
+  
+  

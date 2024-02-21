@@ -8,8 +8,13 @@ format: html
 - Binomial
   - [Negative binomial for gene expression]{style="color: red;"}
 
+### P-values
+
+- [How to interpret a p-value histogram](http://varianceexplained.org/statistics/interpreting-pvalue-histogram/)
+
 ### Statistical tests
 
 - Fisher's Exact Test
   - A more precise (exact) version of Chi-square test but computationally intensive for large data
   - Calculates probability using factorials while Chi-square uses distribution (so works for larger data)
+  
