@@ -193,6 +193,18 @@ Tools below can do both alignment and quantification but they can be used in com
 - `Seurat::FindAllMarkers()` - comparing a cluster against all remaining cells from all other clusters (https://github.com/satijalab/seurat/issues/1075)
 - `Seurat::FindConservedMarkers()` - find differentially expressed markers between clusters that are conserved across other grouping variable e.g. batch; see [vignette](https://satijalab.org/seurat/articles/integration_introduction.html)
 
+## Integration
+
+### Metrics
+
+1. Average silhouette width - Measures how similar a cell is to its own cluster compared to other clusters. Higher silhouette scores indicate better separation between clusters.
+
+2. Local inverse Simpson’s Index (LISI) - "defines the effective number of datasets in a neighborhood. Neighborhoods represented by only a single dataset get an iLISI of 1, while neighborhoods with an equal number of cells from two datasets get an iLISI of 2. Note that even under ideal mixing, if the datasets have different numbers of cells, iLISI would be less than 2" - From Harmony paper
+
+3. Adjusted Rand Index (ARI) - measure of the similarity between two data clusterings. It is a correction of the Rand Index, which is a basic measure of similarity between two clusterings, but it has the disadvantage of being sensitive to chance (https://oecd.ai/en/catalogue/metrics/adjusted-rand-index-%28ari%29#:~:text=The%20Adjusted%20Rand%20Index%20(ARI,of%20being%20sensitive%20to%20chance.)
+
+4. kBET metric - measures batch mixing on the local level using a predetermined number of nearest neighbors, which are selected around each data point by distance, to compute the local batch label distribution (doi: 10.1186/s13059-019-1850-9)
+
 # Single-cell ATAC-seq
 
 ## Analysis
