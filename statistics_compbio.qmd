@@ -1,0 +1,10 @@
+---
+title: "statistics_compbio"
+format: html
+---
+
+# Differential expression analysis
+
+## General concepts
+- Think about if filtering out genes is beneficial (e.g. removing lowly expressed genes, use only highly variable genes from single cell data)
+  + Filter using normalised counts then apply fltering to raw counts, which will be the input
