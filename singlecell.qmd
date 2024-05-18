@@ -3,8 +3,7 @@ title: "singlecell"
 format: html
 ---
 
-### Single-cell sequencing protocols
-
+# Single-cell sequencing protocols
 1. 3 types of protocols mainly differentiated by cell isolation method
    - Commercial Fluidigm C1 microfluidic chip based
    - Well plate based
@@ -17,7 +16,7 @@ format: html
      + "10X Genomics favored the capture and amplification of shorter genes and genes with higher GC content" - Scbp (Single-cell best practices)
    - Some cell states are more vulnerable to dissociation (e.g. non-neuronal cells survive better than neurons - Darmanis et al. 2015, Scbp)
 
-### Raw data processing
+# Raw data processing
 
 1. Get FASTQ files (Sequence + quality)
    - Manual download from https://www.ebi.ac.uk/ena/browser/view/\<SR ID\>
@@ -44,7 +43,7 @@ Tools below can do both alignment and quantification but they can be used in com
 2. Kallisto
 3. STARsolo (available in latest STAR versions)
 
-### Analysis - General Remarks
+# Analysis - General Remarks
 
 1.  Check first individual datasets before integrating. Check consistency between technical and biological replicates.
 
@@ -85,11 +84,11 @@ Tools below can do both alignment and quantification but they can be used in com
 
 ## Quality control
 
-## Empty droplets
+### Empty droplets
 
 - Use latest technology-specific expected percentage of empty droplets to help decide threshold for removing empty droplets
 
-## Doublets
+### Doublets
 
 - Use latest technology-specific expected percentage of doublets to help decide threshold for removing doublets
 
@@ -112,6 +111,10 @@ Tools below can do both alignment and quantification but they can be used in com
 - RNAs in mitochondria can be both mitochondrial and nuclear genome encoded
   + Those human gene symbols with "M^T-" are the ones encoded by the mitochondrial genome
 
+### **Barcode swapping (earlier called as 'index hopping')**
+
+- Given a multiplexed pool of samples, we identify potential swapping events as transcript molecules that share the same combination of UMI sequence, assigned gene and cell barcode across samples. We only keep the molecule if it has dominant coverage in a single sample, which is likely to be its original sample; we remove all (presumably swapped) instances of that molecule in the other samples. - OSCA
+
 ## Demultiplexing
 
 ### HTODemux()
@@ -130,7 +133,10 @@ Tools below can do both alignment and quantification but they can be used in com
 - `Seurat::NormalizeData()` always works off of the counts slots and will overwrite the data slot (https://github.com/satijalab/seurat/issues/2362)
 
 - **Understand** `scuttle::computePooledFactors()`
-
+  + Typical library size normalisation can be insufficient because of compositional biases (e.g. presence of DE genes), wherein some cells can be expected to have high expression of some marker genes for example while other cells expected not to expressed those markers
+  + DESeq or TMM normalization are more robust to DE but rely on the calculation of ratios of counts between cells. This is not straightforward in scRNA-seq data, where the high frequency of dropout events interferes with stable normalization - original `scuttle::computePooledFactors()` paper
+  + This `scuttle::computePooledFactors()` was made to improve normalisation by decreasing incidence of zeroes or dropouts by pooling cells
+  
 - Removing some highly expressed genes before normalisation
   + High gene counts can skew normalisation so some people may remove them before normalisation
   + Maybe can do normalisation with all genes then if highly expressed genes do not significantly vary, can safely remove them then redo normalisaiton without these genes
@@ -162,6 +168,9 @@ Tools below can do both alignment and quantification but they can be used in com
 ### Methods
 
 - Variance stabilising transformation (vst)
+- scran::modelGeneVar()
+  + Model mean-variance trend and then the log-expression profiles per gene are decomposed into technical (value predicted by model describing mean-variance trend) and biological variance (total variance of log counts across cells per gene - estimated technical variance)
+  + Strictly speaking, the interpretation of the fitted trend as the technical component assumes that the expression profiles of most genes are dominated by random technical noise
 
 ## Scaling data
 
@@ -172,7 +181,12 @@ Tools below can do both alignment and quantification but they can be used in com
 ## Dimensionality reduction
 
 ### PCA
+
 - "The default for `Seurat::RunPCA()` is to use the variable features, but there is a requirement that the features are scaled. It will issue a warning when you request features not in scaled data, but will still proceed with the subset that are scaled." (https://github.com/satijalab/seurat/issues/2365)
+
+- Use scran::fixedPCA() to "perform a PCA where the desired number of components is known ahead of time"
+  + By default, scran::fixedPCA() will compute the first 50 PCs and store them in the reducedDims() of the output SingleCellExperiment object, as shown below (set seed before)
+  + Internally uses BiocSingular::runSVD(center = TRUE) but not argument to scale as in scater::runPCA() but plotting functions in scater e.g. scrater::plotHeatmap() have scale and center arguments
 
 ## Clustering
 
@@ -192,6 +206,10 @@ Tools below can do both alignment and quantification but they can be used in com
 
 - `Seurat::FindAllMarkers()` - comparing a cluster against all remaining cells from all other clusters (https://github.com/satijalab/seurat/issues/1075)
 - `Seurat::FindConservedMarkers()` - find differentially expressed markers between clusters that are conserved across other grouping variable e.g. batch; see [vignette](https://satijalab.org/seurat/articles/integration_introduction.html)
+
+- `scran::getClusteredPCs()` to select priori choice of number of PCs - We perform clustering (graph-based by default, see Basic Section 5.2) on the first d*PCs and only consider the values of d that yield no more than d + 1 clusters; assumption is number of required PCs could be estimated as number of expected subpopulations - 1 i.e. smallest number of PCs to separate each subpopulation
+
+- `scran::quickCluster` - function to quickly do clustering even just from normalised counts because it does PCA etc. in one go / function
 
 ## Integration
 
@@ -242,4 +260,21 @@ Tools below can do both alignment and quantification but they can be used in com
   + It removes barcodes likely to be ambient
   + It removes counts from genes likely from ambient - probably based on modelling of ambient from barcodes likely to be empty and contain only ambient RNA
   
-  
+# Bioconductor workflow
+
+## SingleCellExperiment class to store single-cell data
+
+- Unlike the Seurat workflow, the Bioconductor single-cell workflow involves multiple packages (70+ single-cell-related Bioconductor packages), each performing a step or subset of steps in the workflow
+- The use of the SCE class for storing single-cell data allows these packages to operate together
+- SCE has slots for different types of data, more often it expects a certain type of data for each of that slot
+- "One of the major advantages of using the SingleCellExperiment is that operations on the rows or columns of the expression data are synchronized with the associated annotation" - OSCA
+- The major slots, assays, colData, rowData, and metadata, are inherited from SummarizedExperiment (SE) class, so methods for SE should be applicable for SCE class but due to the nature of single-cell data, there is a need for single-cell specific slots (reducedDims, alternative experiments), hence the development of the SCE class
+
+### Alternative experiments in SCE object
+
+- 'The SingleCellExperiment class provides the concept of "alternative Experiments” where we have data for a distinct set of features but the same set of samples/cells' - OSCA
+- Any SE or SCE can be stored as alternative experiment
+
+### Plotting
+
+- `scater::plotScater()` - Cumulative proportion of library (y) accounted by number of variable features (x) for each cell in a SCE object
