@@ -160,6 +160,12 @@ Tools below can do both alignment and quantification but they can be used in com
   + Modelling depedence of variance with log UMI (y ~ log_umi) using negative binomial expression?
   + Calculates size factors per gene groups based on mean expression
   
+### SCTransform
+
+- Output (https://github.com/satijalab/seurat/issues/1957)
+  + counts slot - Sequencing depth-corrected counts "reversed transforming" from Pearson residuals in data slot (https://github.com/satijalab/seurat/issues/2457)
+  + data slot - Pearson residuals
+  + scale.data slot - Pearson residuals scaled by the expected(?) sd, by default returned for variables genes determined by the method
   
 ## Find variable features
 
