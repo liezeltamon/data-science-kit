@@ -2,9 +2,14 @@
 Those I've read, still reading, also some suggestions from people...
 
 ## Computational Biology
- * [Bioinformatics Training at the Harvard Chan Bioinformatics Core](https://hbctraining.github.io/main/)
- * [Computational Genomics with R](https://compgenomr.github.io/book/index.html) (Online version of book)
+  * [Bioinformatics Training at the Harvard Chan Bioinformatics Core](https://hbctraining.github.io/main/)
+  * [Computational Genomics with R](https://compgenomr.github.io/book/index.html) (Online version of book)
  
+## Databases
+
+### Cell type/identity markers
+  * [PanglaoDB](https://panglaodb.se)
+  
 ## General
   * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
   
@@ -36,6 +41,9 @@ Those I've read, still reading, also some suggestions from people...
 ## Snakemake
   * [Bash -> Make -> Snakemake](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/snakemake/tutorial.html) 
 
+## Software
+  * [hedgedoc](https://hedgedoc.org) - open-source, web-based, self-hosted, collaborative markdown editor for collaborative work e.g. coding, presentations, taking notes
+  
 ## Statistics
   * [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature portfolio)
     
