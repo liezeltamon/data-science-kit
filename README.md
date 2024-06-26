@@ -18,10 +18,16 @@ Those I've read, still reading, also some suggestions from people...
 ### Resource
   * [An Introduction to Statistical Learning](https://hastie.su.domains/ISLP/) (Book)
   * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
+  * [Jay Alammar](https://jalammar.github.io) - explains ML concepts with nice visualisations
   
 ### Ensembling
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
+
+### Methods
+  * [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - introduction to transformers
+### Interpretability
+  * [What Do Neural Networks Really Learn? Exploring the Brain of an AI Model](https://www.youtube.com/watch?v=jGCvY4gNnA8) - explanation for non-technical audience
    
 ## Mathematics
 
