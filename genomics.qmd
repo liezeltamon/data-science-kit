@@ -1,0 +1,23 @@
+---
+title: "Genomics and genetics"
+format: html
+---
+
+### Dictionary
+
+- Genotype - genetic information often represented using two copies (two alleles) of a locus
+- Allele - different version of a locus
+- Allele frequency / count - frequency / count of allele in population
+- Haplotype - group/series of alleles or variations/polymorphisms in a copy of a locus or region (also often used specifically for groups of alleles or variations inherited together from a single parent)
+- Phasing - process of assigning alleles to paternal and maternal chromosomes to derive haplotypes
+- Imputation - educated guess as to what the missing genotypes could be
+  + Imputation of sporadically missing SNPs - fill in missing SNPs based on established haplotypes e.g. from phasing or from a reference haplotype determined from a population
+  + Imputation between SNP chips - fill in missing SNPs in low-density chips (which is done to save cost then coupled with imputation) from haplotypes from high-density chips (if available)
+- Linkage disequilibrium - phenomenon where specific combinations of alleles at two or more loci occur together more or less frequently in a population than would be expected based on their individual allele frequencies
+- Hardy-Weinberg equilibrium
+
+### Resources
+
+- [Genomics Boot Camp YouTube Channel by Gabor Meszaros](https://www.youtube.com/@GenomicsBootCamp) for useful videos on understanding genomics and genetics concepts
+  + Great [video](https://www.youtube.com/@GenomicsBootCamp) explaining haplotype and imputation
+  
