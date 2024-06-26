@@ -1,0 +1,26 @@
+---
+title: "Machine learning"
+format: html
+---
+
+## Deep learning
+
+#### Transformers
+
+- Useful particularly for capturing long-range dependencies e.g. relationship between words in a sentence, relationship between regulatory elements in a genomic region
+
+- Terminology
+  + Token - piece of input given to transformer (e.g. a word, part of a word)
+- Components
+  + Encoder
+  + Decoder
+  + Embedding - convert tokens to numbers
+  + Positional encoding - keep track of token order
+  + Self-attention - keep track of relationships within the input and output phrases
+  + Encoder-Decoder attention - keep track of things between input and output phrases
+  + Residual connections
+- Questions
+  + Application to biology
+    + If position between inputs does not matter in application e.g. predicting phenotype from gene/protein expression, is positional encoding omitted? or can it be used to identify relationships important for prediction?
+    + For tasks that do not need positional encoding, which is one of the strengths of transformers, why would you prefer transformer? Is it because of the attention mechanism that gives more opportunity to figure out features and relationships between features that are the most important to prediction?
+    
