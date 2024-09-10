@@ -3,7 +3,21 @@ title: "Machine learning"
 format: html
 ---
 
+## General
+
+#### Terms
+
+- Gradient descent - Training a ML/DL model is an optimization problem that minimizes loss function through gradient descent
+  + Variants of gradient descent are: stochastic, batch gradient descent
+- Backpropagation - method of calculating gradient of loss function
+
 ## Deep learning
+
+#### Loss functions
+
+- Common ones used: cross-entropy and mean-squared error
+- Entropy - quantifies how uncertain a model is about its predictions (represented by a probability distribution)
+- Cross entropy - commonly used quantifies how well the predicted distribution matches the true distribution
 
 #### Transformers
 
