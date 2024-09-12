@@ -34,6 +34,9 @@ Those I've read, still reading, also some suggestions from people...
 ### Linear algebra
    * [3Blue1Brown](https://www.youtube.com/c/3blue1brown) (YouTube channel)
 
+## Multi-omic integration
+  * [A Guide to Multi-omics Integration Strategies](https://frontlinegenomics.com/a-guide-to-multi-omics-integration-strategies/) for concise summary of current strategies (December 2023)
+
 ## R
   * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
   * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
