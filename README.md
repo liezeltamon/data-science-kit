@@ -40,7 +40,8 @@ Those I've read, still reading, also some suggestions from people...
 ## R
   * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
   * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
-  * [Advanced R Solutions - 2nd ed](https://advanced-r-solutions.rbind.io/) (Online version of book) 
+  * [Advanced R Solutions - 2nd ed](https://advanced-r-solutions.rbind.io/) (Online version of book)
+  * [Best Practice for R :: Cheat Sheet](https://github.com/wurli/r-best-practice)
 
 ## Single-cell
   * [Single-cell best practices](https://www.sc-best-practices.org/preamble.html) (Online version of book) 
