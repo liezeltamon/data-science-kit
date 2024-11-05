@@ -163,9 +163,9 @@ Tools below can do both alignment and quantification but they can be used in com
 ### SCTransform
 
 - Output (https://github.com/satijalab/seurat/issues/1957)
-  + counts slot - Sequencing depth-corrected counts "reversed transforming" from Pearson residuals in data slot (https://github.com/satijalab/seurat/issues/2457)
-  + data slot - Pearson residuals
-  + scale.data slot - Pearson residuals scaled by the expected(?) sd, by default returned for variables genes determined by the method
+  + counts slot - Sequencing depth-corrected counts "reversed transforming" from Pearson residuals in scale.data slot (https://github.com/satijalab/seurat/issues/2457)
+  + data slot - calculated from residuals (?) - https://github.com/satijalab/seurat/issues/3841
+  + scale.data slot - Pearson residuals (residuals from model divided by expected standard deviation of residuals, centered by default) are taken as the scaled expression values
   
 ## Find variable features
 
