@@ -163,10 +163,14 @@ Tools below can do both alignment and quantification but they can be used in com
 ### SCTransform
 
 - Output (https://github.com/satijalab/seurat/issues/1957)
-  + counts slot - Sequencing depth-corrected counts "reversed transforming" from Pearson residuals in scale.data slot (https://github.com/satijalab/seurat/issues/2457)
-  + data slot - calculated from residuals (?) - https://github.com/satijalab/seurat/issues/3841
+  + counts slot
+    - (corrected) counts (SCTransform help page)
+    - Sequencing depth-corrected counts "reversed transforming" from Pearson residuals in scale.data slot (https://github.com/satijalab/seurat/issues/2457)
+  + data slot
+    - log1p(counts) (SCTransform help page)
+    - calculated from residuals (?) - https://github.com/satijalab/seurat/issues/3841
   + scale.data slot - Pearson residuals (residuals from model divided by expected standard deviation of residuals, centered by default) are taken as the scaled expression values
-   - "Positive residuals for a given gene in a given cell indicate that we observed more UMIs than expected given the gene’s average expression in the population and cellular sequencing depth, while negative residuals indicate the converse." [sctransform 2019 paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1874-1)
+   - "Positive residuals for a given gene in a given cell indicate that we observed more UMIs than expected given the gene’s average expression in the population and cellular sequencing depth, while negative residuals indicate the converse." [sctransform 2019 paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1874-1) and (SCTransform help page)
   
 ## Find variable features
 
