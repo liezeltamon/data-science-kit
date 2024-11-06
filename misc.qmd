@@ -3,6 +3,10 @@ title: "misc"
 format: html
 ---
 
+### Teaching
+
+- [messy](https://github.com/nrennie/messy) R package to convert clean to messy data
+
 ### Computing concepts
 
 - double 
