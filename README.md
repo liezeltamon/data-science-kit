@@ -36,6 +36,7 @@ Those I've read, still reading, also some suggestions from people...
 
 ## Multi-omic integration
   * [A Guide to Multi-omics Integration Strategies](https://frontlinegenomics.com/a-guide-to-multi-omics-integration-strategies/) for concise summary of current strategies (December 2023)
+  * [Nikolay Oskolkov' GitHub](https://github.com/NikolayOskolkov) for tutorials on Python-based data integration using ML
 
 ## R
   * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
