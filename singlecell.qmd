@@ -220,6 +220,10 @@ Tools below can do both alignment and quantification but they can be used in com
 
 ## Integration
 
+### Methods
+
+1. Seurat::IntegrateLayers() - refer to https://github.com/satijalab/seurat/issues/8653 to understand evolution of IntegrateData() to IntegrateLayers() (v5)
+
 ### Metrics
 
 1. Average silhouette width - Measures how similar a cell is to its own cluster compared to other clusters. Higher silhouette scores indicate better separation between clusters.
