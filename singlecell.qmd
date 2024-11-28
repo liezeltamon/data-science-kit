@@ -4,6 +4,7 @@ format: html
 ---
 
 # Single-cell sequencing protocols
+
 1. 3 types of protocols mainly differentiated by cell isolation method
    - Commercial Fluidigm C1 microfluidic chip based
    - Well plate based
@@ -240,6 +241,10 @@ Tools below can do both alignment and quantification but they can be used in com
 
 # Single-cell ATAC-seq
 
+## Packages
+
+- ArchR
+
 ## Analysis
 
 ### General notes
@@ -254,18 +259,44 @@ Tools below can do both alignment and quantification but they can be used in com
 
 - scATAC more high-dimensional than scRNA because the features for the former, which are the DNA regions / peaks, can vary in number and exceed number of genes depending on the resolution used
 
+### Cell calling
+
+- Calculate hamming distance between pairs of cells to identify true cells (?)
+
+### Data
+
+- Feature matrix is region cell x bins (check format based on package used), and the value is the aggregation of signal from regions in that bin
+
+###### Sparsity
+
+- scATAC = 1-10% of peaks detected per cell vs. scRNA = 10-45% of expressed genes detected per cell
+
 ### Quality control
 
 - Number of unique nuclear fragments
 - Signal-to-noise background ratio
-  + Determined using TSS content i.e. we expect TSS to be enriched in the data
+  + Determined using TSS content i.e. we expect TSS to be enriched in the open chromatin regions data
 - Fragment size distribution
+
+### Peak calling
+
+- Original method: (As in bulk) Cells should be aggregated for peak calling, at the early stage before knowing cell types or cluster, this is aggregating all cells. After getting clusters, peak calling then be done per cell type / cluster
+
+- Other method: Cells not aggregated but to address low signal, signal per cell are aggregated in bins of certain length (e.g. 5000-bp bin in the first release of method)
 
 ### Compositional analysis
 
 - Simply comparing proportions can be misleading because the limit on the capacity of cells that can be assayed/captured can artificially alter the composition of cells in a condition (explained in Scbp)
 - Two types of methods: 1) requires cell annotation e.g. scCODA 2) uses KNN graph e.g. MiloR
   + Choosing depends on how robust is the clustering; 2nd type of method useful if working with data where hard boundaries between cell populations may not be advisable or practical such as developmental data or looking at states within a cell types 
+
+### Annotating regulatory elements
+
+- ATAC-seq data needs to be combined with histone marks data to annotate regulatory elements
+
+# Single-cell multiome
+
+- 10x multiome is ATAC-seq + RNA-seq (nuclear RNA)
 
 # Python single cell analysis
 
