@@ -38,6 +38,7 @@ Those I've read, still reading, also some suggestions from people...
   * [The Multi-Omics Playbook](https://lp.frontlinegenomics.com/multi-omics-2024?_gl=1*10uj9rb*_ga*MTQ3MjgwNTIxNC4xNzMzMjU1MTgx*_ga_1QP1WL2ZZL*MTczMzI1NTE4MC4xLjEuMTczMzI1NTI0Ni4wLjAuMA..*_gcl_au*MTQ3MzczMDQ0OC4xNzMzMjU1MTgx*_ga_0VPLD5WLYX*MTczMzI1NTE4MC4xLjEuMTczMzI1NTI0Ni4wLjAuMA..&_ga=2.266452174.1731297708.1733255181-1472805214.1733255181) (released February 2024) - multi-omic updates from experts
   * [A Guide to Multi-omics Integration Strategies](https://frontlinegenomics.com/a-guide-to-multi-omics-integration-strategies/) for concise summary of current strategies (December 2023)
   * Dr. Nikolay Oskolkov's [GitHub](https://github.com/NikolayOskolkov) and [blog](https://nikolay-oskolkov.medium.com) for resources on Python-based data integration using ML
+  * [mixOmics webiste](http://mixomics.org) - Details on collection of tools in mixOmics R package for integrating multi-omic bulk data
 
 ## R
   * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
