@@ -9,7 +9,10 @@ Those I've read, still reading, also some suggestions from people...
 
 ### Cell type/identity markers
   * [PanglaoDB](https://panglaodb.se)
-  
+
+### Single-cell tools
+  * [scRNA-tools](https://www.scrna-tools.org)
+
 ## General
   * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
   
