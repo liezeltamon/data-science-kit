@@ -32,7 +32,12 @@ Those I've read, still reading, also some suggestions from people...
   * [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - introduction to transformers
 ### Interpretability
   * [What Do Neural Networks Really Learn? Exploring the Brain of an AI Model](https://www.youtube.com/watch?v=jGCvY4gNnA8) - explanation for non-technical audience
-   
+
+## Managing environments
+  * Deciding how to best manage Python libraries:
+    - [Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
+    - [stackoverflow: What is the difference between venv, pyvenv, pyenv, virtualenv, virtualenvwrapper, pipenv, etc?](https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe)
+  
 ## Mathematics
 
 ### Linear algebra
