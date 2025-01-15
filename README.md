@@ -81,7 +81,10 @@ Those I've read, still reading, also some suggestions from people...
 
 #### Bayesian Optimisation
   * [How to Implement Bayesian Optimization from Scratch in Python](https://machinelearningmastery.com/what-is-bayesian-optimization/) (Article, Coding demo)
- 
+
+## Workflows/pipelines
+  * [workflowr](https://github.com/workflowr/workflowr) - For creating reproducible project workflows
+
 ## Coding interview prepartion
   * [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/) (Website) 
   * [HackerRank](https://www.hackerrank.com/dashboard) (Website) 
