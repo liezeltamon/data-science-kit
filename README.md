@@ -49,6 +49,9 @@ Those I've read, still reading, also some suggestions from people...
   * Dr. Nikolay Oskolkov's [GitHub](https://github.com/NikolayOskolkov) and [blog](https://nikolay-oskolkov.medium.com) for resources on Python-based data integration using ML
   * [mixOmics webiste](http://mixomics.org) - Details on collection of tools in mixOmics R package for integrating multi-omic bulk data
 
+## Quality control
+  * [RNAseqQC for RNA-seq data](https://cran.r-project.org/web/packages/RNAseqQC/vignettes/introduction.html)
+
 ## R
   * [Advanced R by Hadley Wickham - 1st ed](http://adv-r.had.co.nz/) (Online version of book) 
   * [Advanced R by Hadley Wickham - 2nd ed](https://adv-r.hadley.nz/) (Online version of book) 
