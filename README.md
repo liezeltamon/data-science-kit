@@ -71,11 +71,14 @@ Those I've read, still reading, also some suggestions from people...
   
 ## Statistics
   * [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature portfolio)
+  
     
 ### Statistical tests
 
-#### Wilcoxon Rank-Sum Test
-  * [What happens under the hood](https://www.stat.auckland.ac.nz/~wild/ChanceEnc/Ch10.wilcoxon.pdf)
+#### Linear model-based tests
+  * [Common statistical tests are linear models](https://lindeloev.github.io/tests-as-linear/?ck_subscriber_id=2505859442&utm_source=convertkit&utm_medium=email&utm_campaign=Learn%20to%20Fish:%20Mastering%20Matrices%20for%20Bioinformatics%20-%2016937267#63_ancova)
+  * [Wilcoxon Rank-Sum Test - What happens under the hood](https://www.stat.auckland.ac.nz/~wild/ChanceEnc/Ch10.wilcoxon.pdf)
+  * [Multivariate ANOVA (MANOVA) Benefits and When to Use It]()
 
 ### Concepts
 
