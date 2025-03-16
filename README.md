@@ -40,8 +40,11 @@ Those I've read, still reading, also some suggestions from people...
   
 ## Mathematics
 
+### General resource
+   * 3Blue1Brown [YouTube](https://www.youtube.com/c/3blue1brown) [Website](https://www.3blue1brown.com)
+     
 ### Linear algebra
-   * [3Blue1Brown](https://www.youtube.com/c/3blue1brown) (YouTube channel)
+   * [Matrix multiplication = Linear transformation](https://www.3blue1brown.com/lessons/linear-transformations?ck_subscriber_id=2505859442&utm_source=convertkit&utm_medium=email&utm_campaign=Learn%20to%20Fish:%20Mastering%20Matrices%20for%20Bioinformatics%20-%2016937267)
 
 ## Multi-omic integration
   * [The Multi-Omics Playbook](https://lp.frontlinegenomics.com/multi-omics-2024?_gl=1*10uj9rb*_ga*MTQ3MjgwNTIxNC4xNzMzMjU1MTgx*_ga_1QP1WL2ZZL*MTczMzI1NTE4MC4xLjEuMTczMzI1NTI0Ni4wLjAuMA..*_gcl_au*MTQ3MzczMDQ0OC4xNzMzMjU1MTgx*_ga_0VPLD5WLYX*MTczMzI1NTE4MC4xLjEuMTczMzI1NTI0Ni4wLjAuMA..&_ga=2.266452174.1731297708.1733255181-1472805214.1733255181) (released February 2024) - multi-omic updates from experts
