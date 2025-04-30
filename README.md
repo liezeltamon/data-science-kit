@@ -1,6 +1,9 @@
 # data_science_kit 
 Those I've read, still reading, also some suggestions from people...
 
+## Differential expression
+  * [DESeq2-MultiBatch](https://github.com/julienroyulaval/DESeq2-MultiBatch)
+
 ## Biological modelling
   * [Biological Modeling](https://biologicalmodeling.org) (Online book)
   * 
