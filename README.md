@@ -89,6 +89,9 @@ Those I've read, still reading, also some suggestions from people...
   * [Wilcoxon Rank-Sum Test - What happens under the hood](https://www.stat.auckland.ac.nz/~wild/ChanceEnc/Ch10.wilcoxon.pdf)
   * [Multivariate ANOVA (MANOVA) Benefits and When to Use It]()
 
+#### Post-hoc analysis of models
+  * [Getting started with emmeans](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/)
+  
 ### Concepts
 
 #### Naive Bayes
