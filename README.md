@@ -13,10 +13,10 @@ Those I've read, still reading, also some suggestions from people...
  
 ## Databases
 
-### Cell type/identity markers
+#### Cell type/identity markers
   * [PanglaoDB](https://panglaodb.se)
 
-### Single-cell tools
+#### Single-cell tools
   * [scRNA-tools](https://www.scrna-tools.org)
   * [scRNAseq-analysis-notes by Tommy Tang](https://github.com/crazyhottommy/scRNAseq-analysis-notes)
 
@@ -25,18 +25,18 @@ Those I've read, still reading, also some suggestions from people...
   
 ## Machine Learning
 
-### Resource
+#### Resource
   * [An Introduction to Statistical Learning](https://hastie.su.domains/ISLP/) (Book)
   * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
   * [Jay Alammar](https://jalammar.github.io) - explains ML concepts with nice visualisations
   
-### Ensembling
+#### Ensembling
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
 
-### Methods
+#### Methods
   * [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - introduction to transformers
-### Interpretability
+#### Interpretability
   * [What Do Neural Networks Really Learn? Exploring the Brain of an AI Model](https://www.youtube.com/watch?v=jGCvY4gNnA8) - explanation for non-technical audience
 
 ## Managing environments
@@ -46,10 +46,10 @@ Those I've read, still reading, also some suggestions from people...
   
 ## Mathematics
 
-### General resource
+#### General resource
    * 3Blue1Brown [YouTube](https://www.youtube.com/c/3blue1brown) [Website](https://www.3blue1brown.com)
      
-### Linear algebra
+#### Linear algebra
    * [Matrix multiplication = Linear transformation](https://www.3blue1brown.com/lessons/linear-transformations?ck_subscriber_id=2505859442&utm_source=convertkit&utm_medium=email&utm_campaign=Learn%20to%20Fish:%20Mastering%20Matrices%20for%20Bioinformatics%20-%2016937267)
 
 ## Multi-omic integration
@@ -81,27 +81,31 @@ Those I've read, still reading, also some suggestions from people...
 ## Statistics
   * [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature portfolio)
   
-    
-### Statistical tests
+#### Statistical tests
 
-#### Linear model-based tests
+###### Linear model-based tests
   * [Common statistical tests are linear models](https://lindeloev.github.io/tests-as-linear/?ck_subscriber_id=2505859442&utm_source=convertkit&utm_medium=email&utm_campaign=Learn%20to%20Fish:%20Mastering%20Matrices%20for%20Bioinformatics%20-%2016937267#63_ancova)
   * [Wilcoxon Rank-Sum Test - What happens under the hood](https://www.stat.auckland.ac.nz/~wild/ChanceEnc/Ch10.wilcoxon.pdf)
   * [Multivariate ANOVA (MANOVA) Benefits and When to Use It]()
 
-#### Post-hoc analysis of models
+###### Post-hoc analysis of models
   * [Getting started with emmeans](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/)
   
-### Concepts
+#### Concepts
 
-#### Naive Bayes
+###### Naive Bayes
   * [6 Easy Steps to Learn Naive Bayes Algorithm with codes in Python and R](https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/?fbclid=IwAR1SOR7dNcJ1XrnPLCYT5ZOgAdcoABme4tiRA7Dg5U-LT6KekjA8IRBkvVU) (Article)
 
-#### Bayesian Optimisation
+###### Bayesian Optimisation
   * [How to Implement Bayesian Optimization from Scratch in Python](https://machinelearningmastery.com/what-is-bayesian-optimization/) (Article, Coding demo)
 
 ## Workflows/pipelines
   * [workflowr](https://github.com/workflowr/workflowr) (GitHub) for creating reproducible project workflows
+
+## Websites
+
+#### Tools
+  * [postcards](https://github.com/seankross/postcards) recommended in [https://www.connectedideasproject.com/p/moving-from-academia-to-biotech](https://www.connectedideasproject.com/p/moving-from-academia-to-biotech)
 
 ## Coding interview prepartion
   * [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/) (Website) 
