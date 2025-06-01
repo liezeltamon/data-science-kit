@@ -59,6 +59,12 @@ Those I've read, still reading, also some suggestions from people...
   * Dr. Nikolay Oskolkov's [GitHub](https://github.com/NikolayOskolkov) and [blog](https://nikolay-oskolkov.medium.com) for resources on Python-based data integration using ML
   * [mixOmics webiste](http://mixomics.org) - Details on collection of tools in mixOmics R package for integrating multi-omic bulk data
 
+## Pipeline
+  * [Thread comparing Nextflow, Snakemake, WDL](https://www.linkedin.com/posts/🎯-ming-tommy-tang-40650014_why-are-workflow-languages-like-snakemake-activity-7294003300742418433-gG62/)
+    
+#### Snakemake
+  * [Bash -> Make -> Snakemake](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/snakemake/tutorial.html) 
+
 ## Quality control
   * [RNAseqQC for RNA-seq data](https://cran.r-project.org/web/packages/RNAseqQC/vignettes/introduction.html)
 
@@ -72,9 +78,6 @@ Those I've read, still reading, also some suggestions from people...
   * [Single-cell best practices](https://www.sc-best-practices.org/preamble.html) (Online version of book) 
   * For sequencing library details, check [Product User Guides](https://www.10xgenomics.com/support/user-guides/single-cell-gene-expression?menu%5BproductNames%5D=Single%20Cell%20Gene%20Expression&menu%5BproductExtensions%5D=&menu%5BchemistryVersionsAndIndices%5D=&page=1) of kits
   * [BioinfQuests YouTube Channel](https://www.youtube.com/watch?v=xA4TrXrNfvU) for good explanation of single-cell experiment and analysis with Cell Ranger
-
-## Snakemake
-  * [Bash -> Make -> Snakemake](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/snakemake/tutorial.html) 
 
 ## Software
   * [hedgedoc](https://hedgedoc.org) - open-source, web-based, self-hosted, collaborative markdown editor for collaborative work e.g. coding, presentations, taking notes
