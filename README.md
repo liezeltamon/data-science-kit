@@ -6,7 +6,7 @@ Those I've read, still reading, also some suggestions from people...
 
 ## Biological modelling
   * [Biological Modeling](https://biologicalmodeling.org) (Online book)
-  * 
+
 ## Computational Biology
   * [Bioinformatics Training at the Harvard Chan Bioinformatics Core](https://hbctraining.github.io/main/)
   * [Computational Genomics with R](https://compgenomr.github.io/book/index.html) (Online version of book)
@@ -92,9 +92,9 @@ Those I've read, still reading, also some suggestions from people...
   * [Wilcoxon Rank-Sum Test - What happens under the hood](https://www.stat.auckland.ac.nz/~wild/ChanceEnc/Ch10.wilcoxon.pdf)
   * [Multivariate ANOVA (MANOVA) Benefits and When to Use It]()
 
-###### Post-hoc analysis of models
+###### QC / Post-hoc analysis of models
   * [Getting started with emmeans](https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/)
-  
+  * [Visual check of model assumptions](https://easystats.github.io/performance/reference/check_model.html)
 #### Concepts
 
 ###### Naive Bayes
