@@ -51,6 +51,7 @@ Those I've read, still reading, also some suggestions from people...
      
 #### Linear algebra
    * [Matrix multiplication = Linear transformation](https://www.3blue1brown.com/lessons/linear-transformations?ck_subscriber_id=2505859442&utm_source=convertkit&utm_medium=email&utm_campaign=Learn%20to%20Fish:%20Mastering%20Matrices%20for%20Bioinformatics%20-%2016937267)
+   * [List of resources to go through](https://www.linkedin.com/posts/%F0%9F%8E%AF-ming-tommy-tang-40650014_1-if-youre-in-bioinformatics-youre-staring-activity-7339649081834692609-qn6e)
 
 ## Multi-omic integration
   * [Multi-Omics Integration Strategy and Deep Diving into MOFA2](https://divingintogeneticsandgenomics.com/post/multiomics-mofa2/) - Good for understanding concepts used by Bayesian/probabilistic integration methods
