@@ -23,6 +23,11 @@ Those I've read, still reading, also some suggestions from people...
 ## General
   * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
   
+## Exploratory Data Analysis (EDA)
+
+* [10 Best Python EDA Tools: Transform Data Analysis Fast!](https://medium.com/top-python-libraries/10-best-python-eda-tools-transform-data-analysis-fast-aa4563174f4e)
+* [Conjuring EDA Reports: Ydata-Profiling vs. Sweetviz vs. Lux](https://medium.com/@ivan.setya12/conjuring-eda-reports-ydata-profiling-vs-sweetviz-vs-lux-48a391998d91)
+
 ## Machine Learning
 
 #### Resource
