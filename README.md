@@ -3,6 +3,7 @@ Those I've read, still reading, also some suggestions from people...
 
 ## Differential expression
   * [DESeq2-MultiBatch](https://github.com/julienroyulaval/DESeq2-MultiBatch)
+  * [dreamlet: Scalable differential expression analysis of single cell transcriptomics datasets with complex study designs (e.g. with random effects)](https://github.com/GabrielHoffman/dreamlet)
 
 ## Biological modelling
   * [Biological Modeling](https://biologicalmodeling.org) (Online book)
