@@ -17,6 +17,9 @@ Those I've read, still reading, also some suggestions from people...
 #### Cell type/identity markers
   * [PanglaoDB](https://panglaodb.se)
 
+### Single-cell datasets
+  * [DISCO](https://disco.bii.a-star.edu.sg)
+  
 #### Single-cell tools
   * [scRNA-tools](https://www.scrna-tools.org)
   * [scRNAseq-analysis-notes by Tommy Tang](https://github.com/crazyhottommy/scRNAseq-analysis-notes)
