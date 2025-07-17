@@ -1,0 +1,97 @@
+---
+title: "linear_modelling"
+format: html
+---
+
+## General idea
+
+- Names: Fitting a line to a data | least squares | linear regression
+- Fitting a line to explain relationship between two continuous variables
+- A starting point could be a horizontal line with y-intercept at mean of value of y but it has the worst fit
+- We have to find a line that is better than this horizontal line and that minimises the sum of squared residuals i.e. least squares
+  + residuals - distance between observed value from predicted values based on the fitted line, could be negative or positive so squaring ensures residual would be positive i.e. residuals with opposite signs don't cancel out
+  + sum of squared residuals to assess goodness of fit of the line
+    - Find parameters of line (slope, b intercept) that minimises the sum of squares
+    - This also why this method of finding the best parameters of the line is called least squares i.e. finding line with least sum of squares
+- Sum of squared residuals function relative to a set of line parameters (slope, intercept) is parabolic so we take the derivative of the function (tells the slope of the line at each point of the function), best point with least squares has derivative/slope = 0
+
+## General concepts
+
+- Fit a line using least squares method by minimising sum of squares
+- Calculate R^2 and significance to assess fit of the data
+  + R^2 is the fraction of variance explained by the line relative to variance around the mean i.e. (var(mean) - var(line)) / var(mean) e.g. R^2 = 0.81 means there is 81% less variation around the line than around the mean or the y and x relationship accounts for 81% of the variance of the data
+    - SS(mean) is sum of squares around the mean, var(mean) is SS(mean) / n (number of data points) i.e. var(mean) as average SS(mean)
+  + R^2 is the square of R (correlation) and R^2 is easier to interpret as explained above but R2 does not show direction of correlation
+  + Adjusted R^2 can be reported which is R^2 scaled by the number of paramters. This is because you can't get a worse fit with more parameters because parameters that worsen fit is given a 0 slope
+  + Significance of R^2 comes from F that is the var(explained by x) / var(not explained by x i.e. remaining residuals after fitting) i.e. the better the fit, the larger the numerator and so the higher the F
+    - The calculation involves degrees of freedom influenced by the number of parameters needed for the line and in turn influenced by the number of predictors. Intuitively, the more parameters are needed to be estimated, the more datapoints are needed **review (https://www.youtube.com/watch?v=7ArmBVF2dCs&list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU&index=3)**
+    -  The p-value for the F of actual data is determined from the null distribution of F statistic from randomised data. This null F distribution can be represented by a line used to get the p-value and the shape of the line will depend on the degrees of freedom
+    
+    
+## Multiple regression    
+
+- All general concepts above apply but here we highlight differences:
+  + But to compare different formulas (lines or fits) and get the significance i.e. to see whether adding another parameter/feature is worthwile, we adopt the same formula for calculating F but instead of comparing to the line based on mean, we compare the two lines using the two formulas (**confirm if related to the t-statistic?**). Big difference in R^2 between the two lines translates to big F i.e. small p-value for the comparison.
+  
+```{r}
+model <- lm(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width, data = iris)
+model
+```
+
+```{r}
+summary(model)
+```
+  + The F-statistic is still the same as in simple regression i.e. fitted line vs. line at mean
+  + p-value for each feature is derived by comparing full formula vs. formula without that feature, so if significant, that feature is important for the formula and adds to the variance explained
+  
+```{r}
+model <- lm(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width + Species, data = iris)
+summary(model)
+```
+- Read
+  + https://statsandr.com/blog/multiple-linear-regression-made-simple/
+  
+## Statistical tests
+
+- Parametric vs. non-parametric tests
+  + Parametric tests generally have higher power to detect effects significantly if it is there but rely on more assumptions (although it is generally robust when sample sizes are large e.g. >= 30 datapoints per group thanks to the central limit theorem)
+  + Choosing should primarily be based on whether you want to use mean (parametric) or median as the better measure of central tendency for the distribution of your data or if the sample size is really small perhaps you'll be forced to use non-parameteric tests (https://statisticsbyjim.com/hypothesis-testing/nonparametric-parametric-tests/, has table for sample size requirements for each test)
+- Parametric tests like t-test and ANOVA are specialised variants of linear regression for categorical independent variables
+  + ANOVA and t-test allow to compare groups in terms of a quantitative variable, 2 groups for t-test and 3 or more groups for ANOVA
+
+#### t-test
+
+#### anova, ancova
+
+- Types (https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/)
+  - Type I - appropriate for balanced design only unlike the other 2 types (`anova()` and `aov()` in R does type I), also sensitive to order of variables in formula i.e. also called sequential sum of squares
+  - Type II - tests for each main effect after the other main effect, if there is no interaction, this is more powerful than type III, treats main effects and interaction effects differently
+    + Each main effect term is attributed with variance (its SS) that is unique to it and that is not attributable to any of the other main effects (simultaneously, as we’ve already seen) but without accounting for the variance attributable to interactions, while the SS of the interaction term represents its unique variance after accounting for the underlying main effects (sequentially) (https://blog.msbstats.info/posts/2021-05-25-everything-about-anova/#balanced-vs.-unbalanced-data)
+  - Type III - tests for the presence of a main effect after the other main effect and interaction, treats main and interaction effects equally
+    + SS for each main effect or interaction is calculated as its unique contribution that is not attributable to any of the other effects in the model - main effects or interactions. So the effect of X is its unique contribution while controlling both for group and for group:X! (https://blog.msbstats.info/posts/2021-05-25-everything-about-anova/#balanced-vs.-unbalanced-data)
+    + Set `options(contrasts = c(“contr.sum”,”contr.poly”))` to deal with the multi-way ANOVA being over-parameterised
+    + Do `drop1(model, .~., test=”F”)` after fitting lm() or just use `car::Anova()` for more flexibility? (confirm) and do `Anova(lm(time ~ topic * sys, data=search, type=2))` for type II, `Anova(lm(time ~ topic * sys, data=search, contrasts=list(topic=contr.sum, sys=contr.sum)), type=3))` for type III
+      - To get main effects for factors (with > 2 levels) when doing type III, predictors should be centered to the mean (mean would be 0), this is easy for continuous variables, but to do this for categorical variables, we use some orthogonal coding like `contr.sum()` (effects coding)
+
+- Do type III ANOVA then simplify to type II ANOVA if interaction not significant (https://statsandr.com/blog/two-way-anova-in-r/#introduction)
+
+- Proper ANOVA on a maximal ()a factorial design:
+
+```{r, eval=False}
+# From https://blog.msbstats.info/posts/2021-05-25-everything-about-anova/
+d$group <- factor(d$group)
+d$condition <- factor(d$condition)
+contrasts(d$group) <- contr.sum
+contrasts(d$condition) <- contr.sum
+m_lm <- lm(Y ~ group * condition, d)
+car::Anova(m_lm, type = 3)
+
+# Alternative is using the afex package:
+afex::aov_car(Y ~ group * condition + Error(id), data = d)
+```
+  
+- ANCOVA is when predictors include also continuous covariates
+
+- References:
+  + [Which to use when? car::Anova(), anova(), gmodels::estimable(), or predict()](https://www.bookdown.org/rwnahhas/RMPH/mlr-distinctions.html)
+  
