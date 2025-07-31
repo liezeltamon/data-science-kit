@@ -24,6 +24,9 @@ Those I've read, still reading, also some suggestions from people...
   * [scRNA-tools](https://www.scrna-tools.org)
   * [scRNAseq-analysis-notes by Tommy Tang](https://github.com/crazyhottommy/scRNAseq-analysis-notes)
 
+### Large-scale processing tools
+  * [SLAF (Sparse Lazy Array Format) for AnnData and Scanpy](https://github.com/slaf-project/slaf)
+
 ## General
   * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
   
