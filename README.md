@@ -1,10 +1,6 @@
 # data_science_kit 
 Those I've read, still reading, also some suggestions from people...
 
-## Differential expression
-  * [DESeq2-MultiBatch](https://github.com/julienroyulaval/DESeq2-MultiBatch)
-  * [dreamlet: Scalable differential expression analysis of single cell transcriptomics datasets with complex study designs (e.g. with random effects)](https://github.com/GabrielHoffman/dreamlet)
-
 ## Biological modelling
   * [Biological Modeling](https://biologicalmodeling.org) (Online book)
 
@@ -27,13 +23,17 @@ Those I've read, still reading, also some suggestions from people...
 ### Large-scale processing tools
   * [SLAF (Sparse Lazy Array Format) for AnnData and Scanpy](https://github.com/slaf-project/slaf)
 
-## General
-  * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
-  
+## Differential expression
+  * [DESeq2-MultiBatch](https://github.com/julienroyulaval/DESeq2-MultiBatch)
+  * [dreamlet: Scalable differential expression analysis of single cell transcriptomics datasets with complex study designs (e.g. with random effects)](https://github.com/GabrielHoffman/dreamlet)
+
 ## Exploratory Data Analysis (EDA)
 
 * [10 Best Python EDA Tools: Transform Data Analysis Fast!](https://medium.com/top-python-libraries/10-best-python-eda-tools-transform-data-analysis-fast-aa4563174f4e)
 * [Conjuring EDA Reports: Ydata-Profiling vs. Sweetviz vs. Lux](https://medium.com/@ivan.setya12/conjuring-eda-reports-ydata-profiling-vs-sweetviz-vs-lux-48a391998d91)
+
+## General
+  * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
 
 ## Machine Learning
 
@@ -97,7 +97,9 @@ Those I've read, still reading, also some suggestions from people...
   
 ## Statistics
   * [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature portfolio)
-  
+  * [Is it a fixed or random effect?](https://dynamicecology.wordpress.com/2015/11/04/is-it-a-fixed-or-random-effect/)
+  * [How many terms should you have in your model before it becomes statistical machismo?](https://dynamicecology.wordpress.com/2015/02/05/how-many-terms-in-your-model-before-statistical-machismo/)
+
 #### Statistical tests
   * [CHOOSING THE CORRECT STATISTICAL TEST IN SAS, STATA, SPSS AND R](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/)
     
