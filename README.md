@@ -36,7 +36,7 @@ Those I've read, still reading, also some suggestions from people...
   * [StatQuest with Josh Starmer](https://statquest.org/video-index/) (YouTube channel)
 
 ## Machine Learning
-
+    
 #### Resource
   * [An Introduction to Statistical Learning](https://hastie.su.domains/ISLP/) (Book)
   * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
@@ -46,11 +46,15 @@ Those I've read, still reading, also some suggestions from people...
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
 
-#### Methods
-  * [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - introduction to transformers
 #### Interpretability
   * [What Do Neural Networks Really Learn? Exploring the Brain of an AI Model](https://www.youtube.com/watch?v=jGCvY4gNnA8) - explanation for non-technical audience
 
+#### Mathematics behind
+  * [The Roadmap of Mathematics for Machine Learning](https://thepalindrome.org/p/the-roadmap-of-mathematics-for-machine-learning)
+    
+#### Methods
+  * [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - introduction to transformers
+    
 ## Managing environments
   * Deciding how to best manage Python libraries:
     - [Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
