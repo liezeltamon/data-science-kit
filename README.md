@@ -41,6 +41,7 @@ Those I've read, still reading, also some suggestions from people...
   * [An Introduction to Statistical Learning](https://hastie.su.domains/ISLP/) (Book)
   * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
   * [Jay Alammar](https://jalammar.github.io) - explains ML concepts with nice visualisations
+  * [The Kaggle Grandmasters Playbook: 7 Battle-Tested Modeling Techniques for Tabular Data](https://developer.nvidia.com/blog/the-kaggle-grandmasters-playbook-7-battle-tested-modeling-techniques-for-tabular-data/)
   
 #### Ensembling
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
