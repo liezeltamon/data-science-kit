@@ -45,6 +45,7 @@ Those I've read, still reading, also some suggestions from people...
   * [Curated list of books on deep learning](https://www.linkedin.com/posts/kowshik24_ive-wasted-hours-on-aiml-books-90-were-activity-7383804935265726464-kj0L/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8)
   * [LlamaIndex](https://www.linkedin.com/posts/paoloperrone_found-where-all-the-senior-ai-engineers-have-activity-7385060170369802240-MtyK/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - Free, comprehensive AI guide
   * [Stanford free deep learning courses](https://www.linkedin.com/posts/paoloperrone_stanford-just-dropped-cs231n-on-youtube-activity-7382881633554587648-MkZx?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8)
+  * [AI by hand by Tom Yeh](https://www.byhand.ai)
 
 ##### Building models
   * [Neo, First Autonomous ML Engineer (Beta)](https://www.linkedin.com/posts/paoloperrone_manual-ml-experimentation-is-dead-i-ran-activity-7385350177747976192-XXv7/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - more automated way of building ML models (also includes feature engineering)
