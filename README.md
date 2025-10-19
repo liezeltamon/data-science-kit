@@ -49,6 +49,7 @@ Those I've read, still reading, also some suggestions from people...
 
 ##### Building models
   * [Neo, First Autonomous ML Engineer (Beta)](https://www.linkedin.com/posts/paoloperrone_manual-ml-experimentation-is-dead-i-ran-activity-7385350177747976192-XXv7/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - more automated way of building ML models (also includes feature engineering)
+  * [nanochat](https://www.linkedin.com/posts/wandb_github-karpathynanochat-the-best-chatgpt-activity-7383588567865966592-o5OE?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - Build LLMs through chat interface (paid)
 
 #### Ensembling
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
