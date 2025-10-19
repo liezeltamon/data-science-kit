@@ -42,7 +42,13 @@ Those I've read, still reading, also some suggestions from people...
   * [The Mathematics of Machine Learning](https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568) (Article)
   * [Jay Alammar](https://jalammar.github.io) - explains ML concepts with nice visualisations
   * [The Kaggle Grandmasters Playbook: 7 Battle-Tested Modeling Techniques for Tabular Data](https://developer.nvidia.com/blog/the-kaggle-grandmasters-playbook-7-battle-tested-modeling-techniques-for-tabular-data/)
-  
+  * [Curated list of books on deep learning](https://www.linkedin.com/posts/kowshik24_ive-wasted-hours-on-aiml-books-90-were-activity-7383804935265726464-kj0L/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8)
+  * [LlamaIndex](https://www.linkedin.com/posts/paoloperrone_found-where-all-the-senior-ai-engineers-have-activity-7385060170369802240-MtyK/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - Free, comprehensive AI guide
+  * [Stanford free deep learning courses](https://www.linkedin.com/posts/paoloperrone_stanford-just-dropped-cs231n-on-youtube-activity-7382881633554587648-MkZx?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8)
+
+##### Building models
+  * [Neo, First Autonomous ML Engineer (Beta)](https://www.linkedin.com/posts/paoloperrone_manual-ml-experimentation-is-dead-i-ran-activity-7385350177747976192-XXv7/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - more automated way of building ML models (also includes feature engineering)
+
 #### Ensembling
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
