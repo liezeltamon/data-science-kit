@@ -51,6 +51,9 @@ Those I've read, still reading, also some suggestions from people...
   * [Neo, First Autonomous ML Engineer (Beta)](https://www.linkedin.com/posts/paoloperrone_manual-ml-experimentation-is-dead-i-ran-activity-7385350177747976192-XXv7/?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - more automated way of building ML models (also includes feature engineering)
   * [nanochat](https://www.linkedin.com/posts/wandb_github-karpathynanochat-the-best-chatgpt-activity-7383588567865966592-o5OE?utm_source=share&utm_medium=member_ios&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8) - Build LLMs through chat interface (paid)
 
+#### Building AI agents
+  * [63-hour roadmap by Paolo Perrone](https://www.linkedin.com/posts/paoloperrone_wanna-build-ai-agents-stop-watching-random-share-7399913445011423232-JSBX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAClXYW8BfluR_uS4UP67MflNhDRZtCNxbj8)
+     
 #### Ensembling
   * [Basics of Ensemble Learning Explained in Simple English](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/) (Article)
   * [How to build Ensemble Models in machine learning? (with code in R)](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) (Article)
