@@ -4,6 +4,9 @@ Those I've read, still reading, also some suggestions from people...
 ## Biological modelling
   * [Biological Modeling](https://biologicalmodeling.org) (Online book)
 
+## Causality packages
+  * [Causomic](https://github.com/Vitek-Lab/Causomic/tree/main?tab=readme-ov-file#features)
+  
 ## Computational Biology
   * [Bioinformatics Training at the Harvard Chan Bioinformatics Core](https://hbctraining.github.io/main/)
   * [Computational Genomics with R](https://compgenomr.github.io/book/index.html) (Online version of book)
